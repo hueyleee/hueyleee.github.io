@@ -1,0 +1,27 @@
+main:
+
+  - title: "\"A Novel Adaptive Intrusion Detection Framework for Dynamic Network Environments\""
+    authors: <b>Hongyu Li</b>, et al.
+    # conference_short: 
+    conference: (Under Review)
+    image: ./assets/img/novel.png
+
+  - title: "A Review of Research on Security Protection Technologies for Business Scenarios in Navigation Hub Infrastructure"
+    authors: <b>Hongyu Li</b>, Sifan Li, Haoxiang Wang, Haotian Wang, <u>Yue Cao</u>, Long Chen, Yu Zhang
+    conference_short: CJIoT
+    conference: Chinese Journal on Internet of Things
+    paper: https://oversea.cnki.net/kcms2/article/abstract?v=BoNITJRTahKA9CKQoOq3WErr8_YVBe-YUIuWp9zbEuAqJge4HawmXlNPx34YwJ9kbSS_VkQcAsI7txHVLBCrjuWFWzLKsnyhrRMqJ31p89KQkN7C6M6x8aGPXxemaRzN7b-GAZsHAlNq5G3iri5YiZxZE75YG5QxdsWNks57DAt1srzpymcdxg==&uniplatform=OVERSEA&language=EN
+    image: ./assets/img/cjiot.png
+
+  - title: "TabSec: A Collaborative Framework for Novel Insider Threat Detection"
+    authors: Zilin Huang, <u>Xiangyuan Tang</u>, <b>Hongyu Li</b>, Xinyi Cao, Jieren Cheng, Wenxuan Tu, Boyi Liu
+    conference_short: IEEE/ISPA
+    conference: 2024 IEEE International Symposium on Parallel and Distributed Processing with Applications
+    paper: https://ieeexplore.ieee.org/abstract/document/10885227/
+    image: ./assets/img/tabsec.png
+
+  - title: "An In-Vehicle Network Intrusion Detection Framework Based on Spatiotemporal Selection and Confidence Feedback"
+    authors: <b>Hongyu Li</b>, <u>Yifeng Wang</u>
+    conference: Bachelor's Thesis (Outstanding)
+    slides: ./assets/files/bachelor_slides.pdf
+    image: ./assets/img/bachelor.png

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title>{{ site.title }} | {{site.affiliation}}</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    {% if site.keywords %}
+    <meta name="keywords" content="{{ site.keywords }}">
+    {% endif %}
+    {% if site.canonical %}
+    <link rel="canonical" href="{{ site.canonical }}"/>
+    {% endif %}
+
+    <link rel="icon" type="image/svg+xml" href="{{ "/assets/img/favicon.svg" | relative_url }}">
+    <link rel="alternate icon" href="{{ "/assets/img/favicon.svg" | relative_url }}">
+
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
+
+    {% if site.font == "Sans Serif" %}
+    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
+    {% else %}
+    <link rel="stylesheet" href="./assets/css/font.css">
+    {% endif %}
+    {% if site.auto_dark_mode %}
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/publications.css">
+    {% else %}
+    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
+    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
+    {% endif %}
+
+    <style>
+      /* Prevent dark mode reader plugins from affecting videos */
+      video,
+      video.background-video,
+      .background-video,
+      .video-container video,
+      body video,
+      html video {
+        filter: none !important;
+        -webkit-filter: none !important;
+        -moz-filter: none !important;
+        -ms-filter: none !important;
+        mix-blend-mode: normal !important;
+        isolation: isolate !important;
+      }
+      .video-container {
+        filter: none !important;
+        -webkit-filter: none !important;
+        -moz-filter: none !important;
+        -ms-filter: none !important;
+        mix-blend-mode: normal !important;
+        isolation: isolate !important;
+      }
+      /* Prevent body background from blocking video */
+      body {
+        background-color: transparent !important;
+        background: transparent !important;
+      }
+      html {
+        background-color: transparent !important;
+        background: transparent !important;
+      }
+      /* Hide iOS play button overlay - NEVER show play controls */
+      video::-webkit-media-controls,
+      video::-webkit-media-controls-enclosure,
+      video::-webkit-media-controls-panel,
+      video::-webkit-media-controls-play-button,
+      video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      video.background-video::-webkit-media-controls,
+      video.background-video::-webkit-media-controls-enclosure,
+      video.background-video::-webkit-media-controls-panel,
+      video.background-video::-webkit-media-controls-play-button,
+      video.background-video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      /* Hide all video controls on all browsers */
+      video {
+        pointer-events: none !important;
+      }
+      video.background-video {
+        pointer-events: none !important;
+      }
+      /* Additional iOS Safari specific hiding */
+      @supports (-webkit-touch-callout: none) {
+        video::-webkit-media-controls {
+          display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+          display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+          display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+          display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+          display: none !important;
+        }
+      }
+    </style>
+
+  </head>
+  <body style="background-color: transparent !important; background: transparent !important;">
+    <div class="video-container">
+      <img class="background-video" src="{{ "/assets/img/background.png" | relative_url }}" alt="Background">
+    </div>
+    <div class="wrapper">
+      <header>
+        
+        <br>
+        {% if site.avatar %}
+        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        {% endif %}
+
+        <h1>{{ site.title }}</h1>
+
+        {% if site.position %}
+        <position style="font-size:1.10rem;">{{ site.position }}</position>
+        <br>
+        {% endif %}
+        {% if site.affiliation %}
+        <autocolor>{{ site.affiliation }}</autocolor>
+        <br>
+        {% endif %}
+        {% if site.email %}
+        <email>{{ site.email }}</email>
+        {% endif %}
+
+        <br>
+        <br>
+        <div class="social-icons">
+        {% if site.sendto %}
+        <a style="margin: 0 5px 0 0" href="mailto:{{ site.sendto }}">
+          <i class="fas fa-envelope"></i>
+        </a>
+        {% endif %}
+        
+        {% if site.google_scholar %}
+        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
+          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
+        </a>  
+        {% endif %}
+
+        {% if site.github_link %}
+        <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
+          <i class="fab fa-github"></i>
+        </a>
+        {% endif %}
+
+        {% if site.linkedin %}
+        <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        {% endif %}
+
+        {% if site.twitter %}
+        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
+          <i class="fab fa-twitter"></i>
+        </a>
+        {% endif %}
+
+        {% if site.cv_link %}
+        <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
+          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
+        </a>
+        {% endif %}
+        </div>
+        <br>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      <br>
+
+      {% if site.enable_footnote %}
+      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+      {% endif %}
+
+      </section>
+      <footer>
+        
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFR3GRL9LX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFR3GRL9LX');
+    </script>
+
+    <!-- Force video playback and hide play button overlay -->
+    <script>
+      (function() {
+        const videoElement = document.querySelector('.background-video');
+        if (videoElement) {
+          // Ensure video plays and never shows controls
+          videoElement.controls = false;
+          videoElement.setAttribute('controls', 'false');
+          videoElement.removeAttribute('controls');
+          
+          // Force play the video
+          const playVideo = () => {
+            if (videoElement.paused) {
+              videoElement.play().catch(() => {
+                // If autoplay fails, try again after user interaction
+                document.addEventListener('touchstart', () => {
+                  videoElement.play().catch(() => {});
+                }, { once: true });
+                document.addEventListener('click', () => {
+                  videoElement.play().catch(() => {});
+                }, { once: true });
+              });
+            }
+          };
+          
+          // Try to play immediately
+          playVideo();
+          
+          // Ensure video plays when loaded
+          videoElement.addEventListener('loadedmetadata', playVideo);
+          videoElement.addEventListener('loadeddata', playVideo);
+          videoElement.addEventListener('canplay', playVideo);
+          
+          // If video pauses, try to play again (but don't show controls)
+          videoElement.addEventListener('pause', () => {
+            if (!document.hidden) {
+              videoElement.play().catch(() => {});
+            }
+          });
+
+          videoElement.addEventListener('ended', () => {
+            videoElement.currentTime = 0;
+            videoElement.play().catch(() => {});
+          });
+          
+          // Hide any play button overlays that might appear
+          const hidePlayButton = () => {
+            const playButtons = videoElement.querySelectorAll('*');
+            playButtons.forEach(btn => {
+              if (btn.style && (btn.style.display !== 'none')) {
+                const computedStyle = window.getComputedStyle(btn);
+                if (computedStyle.cursor === 'pointer' || btn.classList.contains('play')) {
+                  btn.style.display = 'none';
+                  btn.style.visibility = 'hidden';
+                  btn.style.opacity = '0';
+                  btn.style.pointerEvents = 'none';
+                }
+              }
+            });
+          };
+          
+          // Continuously check for play buttons (especially on iOS)
+          setInterval(hidePlayButton, 100);
+          
+          // Also hide on various events
+          ['load', 'play', 'playing', 'pause'].forEach(event => {
+            videoElement.addEventListener(event, hidePlayButton);
+          });
+        }
+      })();
+    </script>
+
+    <!-- Dark Mode Video Switcher -->
+    <script>
+      (function() {
+        const video = document.querySelector('.background-video source');
+        const videoElement = document.querySelector('.background-video');
+        const normalVideo = './assets/video/krumzi-video.mp4';
+        const darkVideo = './assets/video/krumzi-video (2).mp4';
+        let lastMode = null;
+        
+        function isDarkMode() {
+          // Check for dark mode classes/attributes that plugins add
+          if (document.documentElement.classList.contains('dark') ||
+              document.documentElement.classList.contains('dark-mode') ||
+              document.documentElement.hasAttribute('data-theme') && document.documentElement.getAttribute('data-theme') === 'dark' ||
+              document.body.classList.contains('dark') ||
+              document.body.classList.contains('dark-mode')) {
+            return true;
+          }
+          
+          // Check computed styles of multiple elements
+          const bodyBg = window.getComputedStyle(document.body).backgroundColor;
+          const htmlBg = window.getComputedStyle(document.documentElement).backgroundColor;
+          const wrapper = document.querySelector('.wrapper');
+          const wrapperBg = wrapper ? window.getComputedStyle(wrapper).backgroundColor : '';
+          
+          // Check for CSS filters (dark mode plugins often use invert filters)
+          const bodyFilter = window.getComputedStyle(document.body).filter;
+          const htmlFilter = window.getComputedStyle(document.documentElement).filter;
+          if (bodyFilter && bodyFilter !== 'none' && bodyFilter.includes('invert')) return true;
+          if (htmlFilter && htmlFilter !== 'none' && htmlFilter.includes('invert')) return true;
+          
+          // Fast brightness check
+          const checkBrightness = (color) => {
+            if (!color || color === 'transparent' || color === 'rgba(0, 0, 0, 0)') return false;
+            const rgb = color.match(/\d+/g);
+            if (!rgb || rgb.length < 3) return false;
+            if (rgb.length === 4 && parseFloat(rgb[3]) < 0.1) return false;
+            const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+            return brightness < 50;
+          };
+          
+          return checkBrightness(bodyBg) || checkBrightness(htmlBg) || checkBrightness(wrapperBg);
+        }
+        
+        function switchVideo() {
+          const shouldUseDarkVideo = isDarkMode();
+          
+          // Only switch if mode actually changed
+          if (lastMode === shouldUseDarkVideo) return;
+          lastMode = shouldUseDarkVideo;
+          
+          const targetSrc = shouldUseDarkVideo ? darkVideo : normalVideo;
+          const currentSrc = video.getAttribute('src');
+          
+          if (currentSrc !== targetSrc) {
+            const currentTime = videoElement.currentTime;
+            video.setAttribute('src', targetSrc);
+            videoElement.load();
+            
+            videoElement.addEventListener('loadedmetadata', function onLoaded() {
+              videoElement.currentTime = currentTime;
+              videoElement.play().catch(() => {});
+              videoElement.removeEventListener('loadedmetadata', onLoaded);
+            }, { once: true });
+          }
+        }
+        
+        // Wait for DOM to be ready, then check
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', switchVideo);
+        } else {
+          switchVideo();
+        }
+        
+        // Watch for DOM changes instantly
+        const observer = new MutationObserver(switchVideo);
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['style', 'class', 'data-theme'],
+          subtree: true
+        });
+        
+        // Very fast periodic check
+        setInterval(switchVideo, 50);
+      })();
+    </script>
+
+  </body>
+</html>
