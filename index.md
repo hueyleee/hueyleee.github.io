@@ -68,15 +68,18 @@ Prior to my current studies, I earned my B.Sc. degree from [Hainan University](h
     </div>
 </div>
 
-<!-- 
+<br>
+ 
 ## Miscellaneous
 
-* 
- -->
+* Lover of travel and photography. View some of my work [<b>here</b>](/photography/) 🌏📷.
+* Ex-school organizer, [CYVA](https://www.linkedin.com/company/chinese-young-volunteers-association/). Passionate about building a better community 🤝❤️.
+* Born and raised in [one of the spiciest regions](https://thechina.travel/explore/food/China's-Spiciest-Province-How-Fierce-Is-Their-Chili-Pepper-Rivalry/) on Earth 🔥🌶️.
+* Long-term swimming enthusiast. My favorite way to recharge 🏊🔋.
 
 <div style="text-align: left; margin-top: 60px; font-size: 0.85em; color: #777;">
     <hr style="border: 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
-    <i>Last updated: Mar. 1, 2026.</i>
+    <i>Last updated: Apr. 8, 2026.</i>
     <br>
     <i>Modified from <a href="https://github.com/yaoyao-liu/minimal-light">this template</a>.</i>
 </div>

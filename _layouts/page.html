@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% if site.keywords %}
+    <meta name="keywords" content="{{ site.keywords }}">
+    {% endif %}
+    {% if site.canonical %}
+    <link rel="canonical" href="{{ site.canonical }}"/>
+    {% endif %}
+
+    <link rel="icon" type="image/svg+xml" href="{{ "/assets/img/favicon.svg" | relative_url }}">
+    <link rel="alternate icon" href="{{ "/assets/img/favicon.svg" | relative_url }}">
+
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
+
+    {% if site.font == "Sans Serif" %}
+    <link rel="stylesheet" href="{{ "/assets/css/font_sans_serif.css" | relative_url }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ "/assets/css/font.css" | relative_url }}">
+    {% endif %}
+    {% if site.auto_dark_mode %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/publications.css" | relative_url }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ "/assets/css/style-no-dark-mode.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/publications-no-dark-mode.css" | relative_url }}">
+    {% endif %}
+
+    <style>
+      /* Prevent dark mode reader plugins from affecting videos */
+      video,
+      video.background-video,
+      .background-video,
+      .video-container video,
+      body video,
+      html video {
+        filter: none !important;
+        -webkit-filter: none !important;
+        -moz-filter: none !important;
+        -ms-filter: none !important;
+        mix-blend-mode: normal !important;
+        isolation: isolate !important;
+      }
+      .video-container {
+        filter: none !important;
+        -webkit-filter: none !important;
+        -moz-filter: none !important;
+        -ms-filter: none !important;
+        mix-blend-mode: normal !important;
+        isolation: isolate !important;
+      }
+      /* Prevent body background from blocking video */
+      body {
+        background-color: transparent !important;
+        background: transparent !important;
+      }
+      html {
+        background-color: transparent !important;
+        background: transparent !important;
+      }
+      /* Hide iOS play button overlay - NEVER show play controls */
+      video::-webkit-media-controls,
+      video::-webkit-media-controls-enclosure,
+      video::-webkit-media-controls-panel,
+      video::-webkit-media-controls-play-button,
+      video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      video.background-video::-webkit-media-controls,
+      video.background-video::-webkit-media-controls-enclosure,
+      video.background-video::-webkit-media-controls-panel,
+      video.background-video::-webkit-media-controls-play-button,
+      video.background-video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      /* Hide all video controls on all browsers */
+      video {
+        pointer-events: none !important;
+      }
+      video.background-video {
+        pointer-events: none !important;
+      }
+      /* Additional iOS Safari specific hiding */
+      @supports (-webkit-touch-callout: none) {
+        video::-webkit-media-controls {
+          display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+          display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+          display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+          display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+          display: none !important;
+        }
+      }
+
+      /* Full-width page layout - no sidebar */
+      .wrapper {
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+
+      .wrapper section {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+
+      @media (max-width: 768px) {
+        .wrapper {
+          max-width: 100% !important;
+        }
+        .wrapper section {
+          max-width: 100% !important;
+        }
+      }
+    </style>
+
+  </head>
+  <body style="background-color: transparent !important; background: transparent !important;">
+    <div class="video-container">
+      <img class="background-video" src="{{ "/assets/img/background.png" | relative_url }}" alt="Background">
+    </div>
+    <div class="wrapper">
+      <section>
+
+      {{ content }}
+
+        <br>
+
+        {% if site.enable_footnote %}
+        <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+        {% endif %}
+
+      </section>
+      <footer>
+        
+      </footer>
+    </div>
+
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+
+    <!-- Force video playback and hide play button overlay -->
+    <script>
+      (function() {
+        const videoElement = document.querySelector('.background-video');
+        if (videoElement) {
+          videoElement.controls = false;
+          videoElement.setAttribute('controls', 'false');
+          videoElement.removeAttribute('controls');
+          
+          const playVideo = () => {
+            if (videoElement.paused) {
+              videoElement.play().catch(() => {
+                document.addEventListener('touchstart', () => {
+                  videoElement.play().catch(() => {});
+                }, { once: true });
+                document.addEventListener('click', () => {
+                  videoElement.play().catch(() => {});
+                }, { once: true });
+              });
+            }
+          };
+          
+          playVideo();
+          videoElement.addEventListener('loadedmetadata', playVideo);
+          videoElement.addEventListener('loadeddata', playVideo);
+          videoElement.addEventListener('canplay', playVideo);
+          
+          videoElement.addEventListener('pause', () => {
+            if (!document.hidden) {
+              videoElement.play().catch(() => {});
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
