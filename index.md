@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-I'm a M.Sc. student at the School of Cyber Science and Engineering, [Wuhan University](https://en.whu.edu.cn/). I'm a member of Autonomous, Sustainable Automotive Protection Research Group ([ASAP Research Group](https://yuecaowix.wixsite.com/yuecao)), fortunately advised by Prof. [Yue Cao](https://scholar.google.com/citations?hl=en&user=lckgBe4AAAAJ). 
+I'm currently a M.Sc. student at the School of Cyber Science and Engineering, [Wuhan University](https://en.whu.edu.cn/). I'm a member of Autonomous, Sustainable Automotive Protection Research Group ([ASAP Research Group](https://yuecaowix.wixsite.com/yuecao)), fortunately advised by Prof. [Yue Cao](https://scholar.google.com/citations?hl=en&user=lckgBe4AAAAJ). 
 
 My current research interests include intrusion detection and IoT security. The primary objective of my research is to develop non-passive and self-adaptive ML solutions, which could enhance the robustness of security defense systems in complex, heterogeneous, and dynamic real-world network environments.
 
