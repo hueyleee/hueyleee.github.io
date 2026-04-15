@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-I'm a first year M.Sc. student at the School of Cyber Science and Engineering, [Wuhan University](https://en.whu.edu.cn/). I'm a member of Autonomous, Sustainable Automotive Protection Research Group ([ASAP Research Group](https://yuecaowix.wixsite.com/yuecao)), fortunately advised by Prof. [Yue Cao](https://scholar.google.com/citations?hl=en&user=lckgBe4AAAAJ). 
+I'm a M.Sc. student at the School of Cyber Science and Engineering, [Wuhan University](https://en.whu.edu.cn/). I'm a member of Autonomous, Sustainable Automotive Protection Research Group ([ASAP Research Group](https://yuecaowix.wixsite.com/yuecao)), fortunately advised by Prof. [Yue Cao](https://scholar.google.com/citations?hl=en&user=lckgBe4AAAAJ). 
 
 My current research interests include intrusion detection and IoT security. The primary objective of my research is to develop non-passive and self-adaptive ML solutions, which could enhance the robustness of security defense systems in complex, heterogeneous, and dynamic real-world network environments.
 
@@ -79,7 +79,7 @@ Prior to my current studies, I earned my B.Sc. degree from [Hainan University](h
 
 <div style="text-align: left; margin-top: 60px; font-size: 0.85em; color: #777;">
     <hr style="border: 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
-    <i>Last updated: Apr. 8, 2026.</i>
+    <i>Last updated: Apr. 15, 2026.</i>
     <br>
     <i>Modified from <a href="https://github.com/yaoyao-liu/minimal-light">this template</a>.</i>
 </div>
